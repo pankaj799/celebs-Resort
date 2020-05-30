@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Stories</title>
+        <link rel="shortcut icon" type="image/png" href="{% static '/css/elements/Celebs5.png' %}" sizes="192*192">
+    <link rel="stylesheet" href="{% static '/css/Stories.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+</head>
+<body>
+<section class="section-social">
+    <ul>
+            <a href="https://www.facebook.com/celebs.resort/"><li>Facebook <spam><img src="{% static '/css/elements/facebook-icon@2x.png' %}"></spam></li></a>
+            <a href="https://www.instagram.com/celeb.resorts/"><li>Instagram <spam><img src="{% static '/css/elements/Instagram_icon@2x.png' %}"></spam></li></a>
+            <a href="mailto:celeb.resorts@gmail.com?Subject=Query%About%Celebs"><li>Google+ <spam><img src="{% static '/css/elements/google+.png' %}"></spam></li></a>
+        </ul>
+</section>
+<div>
+    <section class="section1">
+        <div class="section1-top">
+            <img src="{% static '/css/elements/Celebs12.png' %}">
+
+            <nav class="navigation_nav">
+                <ul class="navigation_list">
+                                                  <li class="navigation_item"><a href="/" class="navigation_link">Home</a></li>
+                        <li class="navigation_item"><a href="adventure" class="navigation_link">Adventure</a></li>
+                        <li class="navigation_item"><a href="stories" class="navigation_link">Gallery & Stories</a></li>
+                        <li class="navigation_item"><a href="bars" class="navigation_link">Bars & Resort</a></li>
+                        <li class="navigation_item"><a href="book" class="navigation_link">Rooms</a></li>
+                        <li class="navigation_item"><a href="contactUs" class="navigation_link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="section1-heading">
+            <h1>Stories</h1>
+            <h2>SHARE YOUR EXPERIENCES</h2>
+            <h3>WITH US</h3>
+        </div>
+        </div>
+
+    </section>
+    <section class="section2">
+        <div class="timeline-container" id="timeline-1">
+            <div class="timeline-header">
+                <h2 class="timeline-header__title">STORIES</h2>
+                <h3 class="timeline-header__subtitle">READ THEIR EXPERIENCES WITH CELEBS</h3>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-text="Photographs">
+                    <div class="timeline__content"><img class="timeline__img" src="{% static '/css/elements/IMG_20191116_170722393-1-1.jpg' %}" />
+                        <h2 class="timeline__content-title">Sunset</h2>
+                        <p class="timeline__content-desc"></p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-text="Photographs">
+                    <div class="timeline__content"><img class="timeline__img" src="{% static '/css/elements/IMG20191113130620-1-1.jpg' %}"/>
+                        <h2 class="timeline__content-title">Mountains</h2>
+                    </div>
+                </div>
+                <div class="timeline-item" data-text="Photographs">
+                    <div class="timeline__content"><img class="timeline__img" src="{% static '/css/elements/IMG_9239 copy-1-1.jpg' %}"/>
+                        <h2 class="timeline__content-title">Rooms</h2>
+                    </div>
+                </div>
+                <div class="timeline-item" data-text="Photographs">
+                    <div class="timeline__content"><img class="timeline__img" src="{% static '/css/elements/IMG_20191116_113606880_HDR-1-1.jpg' %}"/>
+                        <h2 class="timeline__content-title">Garden</h2>
+                    </div>
+                </div>
+                <div class="timeline-item" data-text="Photographs">
+                    <div class="timeline__content"><img class="timeline__img" src="{% static '/css/elements/DSC_0419-1-1.jpg' %}"/>
+                        <h2 class="timeline__content-title">Reception</h2>
+                    </div>
+                </div>
+                <div class="timeline-item" data-text="Photographs">
+                    <div class="timeline__content"><img class="timeline__img" src="{% static '/css/elements/DSC_0629-1-1.jpg' %}"/>
+                        <h2 class="timeline__content-title">Resort View</h2>
+                    </div>
+                </div>
+                <div class="timeline-item" data-text="Photographs">
+                    <div class="timeline__content"><img class="timeline__img" src="{% static '/css/elements/DSC_0723-1.jpg' %}"/>
+                        <h2 class="timeline__content-title">Resort View</h2>
+                    </div>
+                </div>
+                <div class="timeline-item" data-text="Photographs">
+                    <div class="timeline__content"><img class="timeline__img" src="{% static '/css/elements/DSC_0818-1-1.jpg' %}"/>
+                        <h2 class="timeline__content-title">Resort</h2>
+
+                    </div>
+                </div>
+                <div class="timeline-item" data-text="Photographs">
+                    <div class="timeline__content"><img class="timeline__img" src="{% static '/css/elements/DSC_0624-1-1.jpg' %}"/>
+                        <h2 class="timeline__content-title">Garden</h2>
+                    </div>
+                </div>
+                <div class="timeline-item" data-text="Photographs">
+                    <div class="timeline__content"><img class="timeline__img" src="{% static '/css/elements/DSC_0499-1-1.jpg' %}"/>
+                        <h2 class="timeline__content-title">Front View</h2>
+                    </div>
+                </div>
+                <div class="timeline-item" data-text="Photographs">
+                    <div class="timeline__content"><img class="timeline__img" src="{% static '/css/elements/DSC_0452-1-1.jpg' %}"/>
+                        <h2 class="timeline__content-title">Resort</h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+
+        (function($) {
+            $.fn.timeline = function() {
+                var selectors = {
+                    id: $(this),
+                    item: $(this).find(".timeline-item"),
+                    activeClass: "timeline-item--active",
+                    img: ".timeline__img"
+                };
+                selectors.item.eq(0).addClass(selectors.activeClass);
+                selectors.id.css(
+                    "background-image",
+                    "url(" +
+                    selectors.item
+                        .first()
+                        .find(selectors.img)
+                        .attr("src") +
+                    ")"
+                );
+                var itemLength = selectors.item.length;
+                $(window).scroll(function() {
+                    var max, min;
+                    var pos = $(this).scrollTop();
+                    selectors.item.each(function(i) {
+                        min = $(this).offset().top;
+                        max = $(this).height() + $(this).offset().top;
+                        var that = $(this);
+                        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+                            selectors.item.removeClass(selectors.activeClass);
+                            selectors.id.css(
+                                "background-image",
+                                "url(" +
+                                selectors.item
+                                    .last()
+                                    .find(selectors.img)
+                                    .attr("src") +
+                                ")"
+                            );
+                            selectors.item.last().addClass(selectors.activeClass);
+                        } else if (pos <= max - 40 && pos >= min) {
+                            selectors.id.css(
+                                "background-image",
+                                "url(" +
+                                $(this)
+                                    .find(selectors.img)
+                                    .attr("src") +
+                                ")"
+                            );
+                            selectors.item.removeClass(selectors.activeClass);
+                            $(this).addClass(selectors.activeClass);
+                        }
+                    });
+                });
+            };
+        })(jQuery);
+
+        $("#timeline-1").timeline();
+
+    </script>
+</body>
+</html>

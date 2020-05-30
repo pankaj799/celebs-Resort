@@ -1,0 +1,358 @@
+<html>
+{% load static %}
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static '/css/BookNow.css' %}">
+    <title>Booking</title>
+    <link rel="shortcut icon" type="image/png" href="{% static '/css/elements/Celebs5.png' %}" sizes="192*192">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" rel="stylesheet">
+
+    <script>
+        $(document).ready(function () {
+            var minDate = new Date();
+            $('#checkin').datepicker({
+                showAnim: 'drop',
+                numberOfMonth: 1,
+                minDate: minDate,
+                dateFormat: 'dd/mm/yy',
+                onclose: function (sectionDate) {
+                    $('#checkout').datepicker("option", "minDate", sectionDate)
+                }
+            });
+            $('#checkout').datepicker({
+                showAnim: 'drop',
+                numberOfMonth: 1,
+                minDate: minDate,
+                dateFormat: 'dd/mm/yy',
+                onclose: function (sectionDate) {
+                    $('#checkin').datepicker("option", "minDate", sectionDate)
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<section class="section-social">
+    <ul>
+            <a href="https://www.facebook.com/celebs.resort/"><li>Facebook <spam><img src="{% static '/css/elements/facebook-icon@2x.png' %}"></spam></li></a>
+            <a href="https://www.instagram.com/celeb.resorts/"><li>Instagram <spam><img src="{% static '/css/elements/Instagram_icon@2x.png' %}"></spam></li></a>
+            <a href="mailto:celeb.resorts@gmail.com?Subject=Query%About%Celebs"><li>Google+ <spam><img src="{% static '/css/elements/google+.png' %}"></spam></li></a>
+        </ul>
+</section>
+<div>
+
+    <div class="section__video-gallery">
+        <div class="section1-top">
+            <img src="{% static '/css/elements/Celebs12-1.png' %}">
+
+            <nav class="navigation_nav">
+                <ul class="navigation_list">
+                                                     <li class="navigation_item"><a href="/" class="navigation_link">Home</a></li>
+                        <li class="navigation_item"><a href="adventure" class="navigation_link">Adventure</a></li>
+                        <li class="navigation_item"><a href="stories" class="navigation_link">Gallery & Stories</a></li>
+                        <li class="navigation_item"><a href="bars" class="navigation_link">Bars & Resort</a></li>
+                        <li class="navigation_item"><a href="book" class="navigation_link">Rooms</a></li>
+                        <li class="navigation_item"><a href="contactUs" class="navigation_link">Contact Us</a></li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <video src="{% static '/css/elements/VID_20190713_193001_1.mp4' %}" type="video/mp4" loop autoplay
+               class="section__video_gallery-video">
+        </video>
+    </div>
+    <div class="section__aboutus">
+        <div class="section__aboutus-heading">About Us</div>
+        <div class="section__aboutus-content">
+            <p>
+                If you are looking for a calm and celestial  peace along with Your “Me time” then Celeb's Resorts is the
+                place for you. Situated in Shoghi hills, this tourist destination is at the height of 5700 ft. An off
+                beat destination gives you 360 degree view of forest, hills and valley. A place where cold breeze would
+                make you forget all your worries and make you closer to yourself. Amidst nature bounty, special bamboo
+                house could  provide the much needed tranquility and seclusion.
+                 Shoghi is just 100 kilometers from Chandigarh and 370 kilometers from Delhi on the national highway.
+                Travel time from Chandigarh is three hours by taxi. There is 24 hours bus services from Delhi and
+                Chandigarh a number of Volvo buses also ply daily on this route.
+            </p>
+
+        </div>
+    </div>
+    <div class="section_about_rooms">
+        <div class="section_about_room_heading"> Best Rooms</div>
+        <div class="section_about_rooms_content">
+            <div class="section_about_rooms_content-left">
+                <div class="section_about_rooms_content-left1">
+                    <div class="section_about_rooms_content-left-heading">
+                        Normal Rooms
+                    </div>
+                    <div class="section_about_rooms_content-left-paragraph">
+                        With a sprawling terrace that lends itself to lounging in the sun, our larger One-Bedroom
+                        MountainFront Premier Room is perfectly positioned by the Mountain, for a memorable hotel stay
+                        in Shimla.
+                    </div>
+                </div>
+            </div>
+            <div class="section_about_rooms_content-right">
+                <div class="section_about_rooms_content_right_image-screen">Rooms</div>
+                <div class="section_about_rooms_content_right-main">
+                    <img src="{% static '/css/elements/2(1)(1).jpg' %}"
+                         class="section_about_rooms_content_right-image" alt="wine glass"></div>
+
+            </div>
+        </div>
+        <div class="section_about_rooms_content">
+            <div class="section_about_rooms_content-left">
+                <div class="section_about_rooms_content-left1">
+                    <div class="section_about_rooms_content-left-heading">
+                        Premium Rooms
+                    </div>
+                    <div class="section_about_rooms_content-left-paragraph">
+                        Best rooms with balcony and premium beds. Feel the comfort and sleep well. View from balcony is
+                        amazing and you will feel like you are in haven.
+                    </div>
+                </div>
+            </div>
+            <div class="section_about_rooms_content-right">
+                <div class="section_about_rooms_content_right_image-screen">Rooms</div>
+                <div class="section_about_rooms_content_right-main">
+                    <img src="{% static '/css/elements/4(1)(1).jpg' %}"
+                         class="section_about_rooms_content_right-image" alt="wine glass"></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="section_about_gallery">
+        <div class="section_about_gallery-heading">Gallery</div>
+        <div class="section_about_gallery-container">
+
+            <div class="section_about_gallery-image1"><img
+                    src="{% static '/css/elements/IMG_20191116_141319879-1-1.jpg' %}"
+                    class="section_about_gallery-image1-1"></div>
+            <div class="section_about_gallery-image2">
+                <div class="section_about_gallery-image2-1"><img src="{% static '/css/elements/DSC_0624-1-1.jpg' %}"
+                                                                 class="section_about_gallery-image1-2"></div>
+                <div class="section_about_gallery-image2-2"><img src="{% static '/css/elements/DSC_0483-1-1.jpg' %}"
+                                                                 class="section_about_gallery-image1-2"></div>
+            </div>
+            <div class="section_about_gallery-image3">
+                <div class="section_about_gallery-image4-1"><img src="{% static '/css/elements/DSC_0499-1-1.jpg' %}"
+                                                                 class="section_about_gallery-image1-2"></div>
+                <div class="section_about_gallery-image5-2"><img src="{% static '/css/elements/DSC_0726-1-1.jpg' %}"
+                                                                 class="section_about_gallery-image1-2"></div>
+            </div>
+        </div>
+        <div class="section_about_gallery-container">
+
+
+            <div class="section_about_gallery-image2">
+                <div class="section_about_gallery-image2-1"><img src="{% static '/css/elements/DSC_0727-1-1.jpg' %}"
+                                                                 class="section_about_gallery-image1-2"></div>
+                <div class="section_about_gallery-image2-2"><img src="{% static '/css/elements/DSC_0726-1-1.jpg' %}"
+                                                                 class="section_about_gallery-image1-2"></div>
+            </div>
+            <div class="section_about_gallery-image3">
+                <div class="section_about_gallery-image4-1"><img src="{% static '/css/elements/DSC_0723-1-1.jpg' %}"
+                                                                 class="section_about_gallery-image1-2"></div>
+                <div class="section_about_gallery-image5-2"><img src="{% static '/css/elements/DSC_0643-1.jpg' %}"
+                                                                 class="section_about_gallery-image1-2"></div>
+            </div>
+            <div class="section_about_gallery-image1"><img
+                    src="{% static '/css/elements/IMG_20191116_141453494-1-1.jpg' %}"
+                    class="section_about_gallery-image1-1"></div>
+        </div>
+    </div>
+    <div class="section_about_video-gallery">
+        <div class="section_about_video-gallery-heading">Video Gallery</div>
+        <div class="section_about_video-gallery-container">
+            <video src="{% static '/css/elements/VID_20190713_193001_2.mp4' %}" type="video/mp4" controls
+                   class="section__video_gallery-video1"></video>
+            <video src="{% static '/css/elements/VID_20190713_193001_3.mp4' %}" type="video/mp4" controls
+                   class="section__video_gallery-video1"></video>
+        </div>
+        <div class="section_about_video-gallery-container">
+            <video src="{% static '/css/elements/IMG_1852.mp4' %}" type="video/mp4" controls
+                   class="section__video_gallery-video1"></video>
+            <video src="{% static '/css/elements/VID_20190713_193001_4.mp4' %}" type="video/mp4" controls
+                   class="section__video_gallery-video1"></video>
+        </div>
+    </div>
+    <div class="section_about_services">
+        <div class="section_about_services-left">
+            <img src="{% static '/css/elements/adventure-clouds-environment-672358.jpg' %}"
+                 class="section_about_services-left-image">
+        </div>
+        <div class="section_about_services-right">
+            <h6 class="section_about_services-right-heading_secondary">
+                SERVICE IS ALWAYS THE BEST
+            </h6><br>
+            <h2>
+                RELAX WITH
+            </h2>
+            <h2 class="section_about_services-right-heading_secondary-heading2">
+                NATURE
+            </h2><br>
+            <p class="section_about_services-right-heading_secondary-paragraph">
+                Nature, in the broadest sense, is the natural, physical, or material world or universe. "Nature" can
+                refer to the phenomena of the physical world, and also to life in general. The study of nature is a
+                large, if not the only, part of science. Although humans are part of nature, human activity is often
+                understood as a separate category from other natural phenomena.</p>
+        </div>
+    </div>
+    <div class="section_about_Events">
+        <div class="section_about_Events-heading_secondary">THE HOTEL NEW</div>
+        <div class="section_about_Events-heading_primary">POSTS & EVENTS</div>
+        <div class="section_about_Events-content">
+            <div class="section_about_Events-content-1">
+                <div class="section_about_Events-content-1-image">
+                    <img src="{% static '/css/elements/woman-wearing-saree-while-standing-on-rock-3153812-1.jpg' %}"
+                         class="section_about_Events-content-1-imagediv">
+                </div>
+                <div class="section_about_Events-content-1-1">
+                    19 Augest 2019
+                </div>
+                <div class="section_about_Events-content-1-2">
+                    <h5>Pre-Wedding Shots</h5>
+                    <p>"To us, family means putting your arms around each other and being there."</p>
+                    <p>"The love of family and the admiration of friends is much more important than wealth and
+                        privilege."</p>
+                    <p>"Best Smiles."</p>
+                </div>
+            </div>
+            <div class="section_about_Events-content-2">
+                <div class="section_about_Events-content-2-image">
+                    <img src="{% static '/css/elements/photo-of-women-wearing-masks-787961-1.jpg' %}"
+                         class="section_about_Events-content-1-imagediv">
+                </div>
+                <div class="section_about_Events-content-2-1">
+                    19 Augest 2019
+                </div>
+                <div class="section_about_Events-content-2-2">
+                    <h5>Parties</h5>
+                    <p>They say faith is taking the first step when you can’t see the whole staircase. Actually, wisdom
+                        is seeing the elevator behind it that would have taken you to the top floor.
+                        I’m coming up so you better get this party started.
+                    </p>
+                </div>
+            </div>
+            <div class="section_about_Events-content-3">
+                <div class="section_about_Events-content-3-image">
+                    <img src="{% static '/css/elements/photograph-of-men-having-conversation-seating-on-chair-1015568-1.jpg' %}"
+                         class="section_about_Events-content-1-imagediv">
+                </div>
+                <div class="section_about_Events-content-3-1">
+                    19 Augest 2019
+                </div>
+                <div class="section_about_Events-content-3-2">
+                    <h5>Official Meets</h5>
+                    <p>A Trip to Kinnaur to See Another Paradisiacal Side of Himachal Pradesh
+                        the price I paid to reach the gorgeous Kinnaur district situated in the northeast part of
+                        Himachal Pradesh was a straight up 21 hours bus journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section-book">
+        <div class="row">
+            <div class="book">
+                <div class="book__form" id="book__form">
+                    <form action="/book" class="form" method="post">
+                        {% csrf_token %}
+                        <div class="u-text-align">
+                            <h2 class="book_heading">
+                                Start Booking Now!
+                            </h2>
+                        </div>
+                        <div class="form_group">
+                            <input type="text" class="form_input" name="name" placeholder="Full Name" id="name"
+                                   required>
+                        </div>
+                        <div class="form_group">
+                            <input type="email" class="form_input" name="email" placeholder="E-mail" id="email"
+                                   required>
+
+                        </div>
+                        <div class="form_group">
+                            <input type="text" class="form_input" name="phone" placeholder="Phone Number" id="number"
+                                   required>
+                        </div>
+                        <div class="form_group">
+                            <input type="text" class="form_input" name="no_of_child" placeholder="Number Of Children"
+                                   id="number" required>
+                            <input type="text" class="form_input" name="no_of_adult" placeholder="Number Of Adults"
+                                   id="number" required>
+
+                        </div>
+                        <div class="form_group">
+                            <input type="text" class="form_input" name="check_in" placeholder="Check In Date"
+                                   id="checkin" required>
+
+                        </div>
+                        <div class="form_group">
+                            <input type="text" class="form_input" name="check_out" placeholder="Check Out Date"
+                                   id="checkout" required>
+
+                        </div>
+
+                        <div class="form_group">
+                            <button type="submit" class="btn-2 btn-white-2">Book Now &rarr;</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer-logo"><img src="{% static '/css/elements/Celebs5-1.png' %}"></div>
+        <div class="footer-lower">
+            <div>
+                <h1>
+                    Rooms
+                </h1>
+                <ul class="footer-list">
+                    <li><a href="BookNow.html">Resort Rooms</a></li>
+                    <li><a href="BookNow.html">Garden Valley View Rooms</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1>Services</h1>
+                <ul class="footer-list">
+                    <li><a href="ContactUsResort.html">Gallery</a></li>
+                    <li><a href="#">Heritage Weddings</a></li>
+                    <li><a href="#">Corporate Meets</a></li>
+                    <li><a href="#">Kitty Parties</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1>About Us</h1>
+                <ul class="footer-list">
+                    <li><a href="">Testimonials</a></li>
+                    <li><a href="">Video Gallery</a></li>
+                    <li><a href="">Happy Day house</a></li>
+                    <li><a href="ContactUsResort.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1>Address</h1>
+                <ul class="footer-list">
+                    <li>Shogi</li>
+                    <li>Shimla</li>
+                    <li>Pin(171219) (Himachal Pradesh)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-lower1">
+            <h1>copyrights &copy; 2018. all rights reserved. www.celebs.com</h1>
+            <h1>Designed By Pankaj Sharma</h1>
+        </div>
+    </section>
+</div>
+</body>
+</html>

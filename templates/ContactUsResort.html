@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+        <link rel="shortcut icon" type="image/png" href="{% static '/css/elements/Celebs5.png' %}" sizes="192*192">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static '/css/ContactUsResort.css' %}">
+</head>
+<body>
+<section class="section-social">
+    <ul>
+            <a href="https://www.facebook.com/celebs.resort/"><li>Facebook <spam><img src="{% static '/css/elements/facebook-icon@2x.png' %}"></spam></li></a>
+            <a href="https://www.instagram.com/celeb.resorts/"><li>Instagram <spam><img src="{% static '/css/elements/Instagram_icon@2x.png' %}"></spam></li></a>
+            <a href="mailto:celeb.resorts@gmail.com?Subject=Query%About%Celebs"><li>Google+ <spam><img src="{% static '/css/elements/google+.png' %}"></spam></li></a>
+        </ul>
+</section>
+<section class="section1">
+    <div class="section1-top">
+        <img src="{% static '/css/elements/Celebs12.png' %}">
+
+        <nav class="navigation_nav">
+            <ul class="navigation_list">
+                                                   <li class="navigation_item"><a href="/" class="navigation_link">Home</a></li>
+                        <li class="navigation_item"><a href="adventure" class="navigation_link">Adventure</a></li>
+                        <li class="navigation_item"><a href="stories" class="navigation_link">Gallery & Stories</a></li>
+                        <li class="navigation_item"><a href="bars" class="navigation_link">Bars & Resort</a></li>
+                        <li class="navigation_item"><a href="book" class="navigation_link">Rooms</a></li>
+                        <li class="navigation_item"><a href="contactUs" class="navigation_link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    </div>
+    <div class="section1-heading">
+        <h1>Contact Us</h1>
+        <h2>CONNECT WITH US</h2>
+    </div>
+</section>
+<section class="section2">
+    <h1>CONTACT US</h1>
+    <h2>E-Mail: <span>celebsresortshimla@gmail.com</span></h2>
+    <h2>Tel: <span>8219190105(Manager)</span></h2>
+    <h2>8580900030(Mr. Dheeraj Sharma)</h2>
+    <h2>9805898813(Mr. Mohit Sharma)</h2>
+    <h2>9817712600(Mr. Himesh Sharma)</h2>
+
+    <p>Alternatively, please complete the form below and one of our team members will respond to your request
+        shortly.</p>
+    <form action="/query" method="post" class="section3-form">
+        {% csrf_token %}
+        <div class="form-line1">
+            <div>
+                <h1>First Name</h1>
+                <input type="text" name="first_name" id="name" required>
+            </div>
+            <div>
+                <h1>Last Name</h1>
+                <input type="text" name="last_name" id="name" required>
+            </div>
+        </div>
+        <div class="form-line1">
+            <div>
+                <h1>Phone Number:</h1>
+                <input type="text" name="phone" id="number" required>
+            </div>
+            <div>
+                <h1>E-Mail</h1>
+                <input type="email" name="email" id="email" required>
+            </div>
+        </div>
+
+        <div class="form-line2">
+            <h1>Suggestions</h1>
+            <textarea  rows="5" name="suggestions">
+
+                </textarea>
+        </div>
+        <div class="form-line3">
+            <input type="checkbox" required>
+            <span>PRIVACY POLICY*</span>
+        </div>
+        <div class="form-line4">
+            <button type="submit">
+                SUBMIT
+            </button>
+        </div>
+    </form>
+</section>
+<div id="map" style="width: 100%; height: 400px;"></div>
+<section class="footer">
+    <div class="footer-logo"><img src="{% static '/css/elements/Celebs5.png' %}"></div>
+    <div class="footer-lower">
+        <div>
+            <h1>
+                Rooms
+            </h1>
+            <ul class="footer-list">
+                <li><a href="BookNow.html">Resort Rooms</a></li>
+                <li><a href="BookNow.html">Garden Valley View Rooms</a></li>
+            </ul>
+        </div>
+        <div>
+            <h1>Services</h1>
+            <ul class="footer-list">
+                <li><a href="ContactUsResort.html">Gallery</a></li>
+                <li><a href="#">Heritage Weddings</a></li>
+                <li><a href="#">Corporate Meets</a></li>
+                <li><a href="#">Kitty Parties</a></li>
+            </ul>
+        </div>
+        <div>
+            <h1>About Us</h1>
+            <ul class="footer-list">
+                <li><a href="">Testimonials</a></li>
+                <li><a href="">Video Gallery</a></li>
+                <li><a href="">Happy Day house</a></li>
+                <li><a href="ContactUsResort.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h1>Address</h1>
+            <ul class="footer-list">
+                <li>Shogi</li>
+                <li>Shimla</li>
+                <li>Pin(171219) (Himachal Pradesh)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-lower1">
+        <h1>copyrights &copy; 2018. all rights reserved. www.celebs.com</h1>
+        <h1>Designed By Pankaj Sharma</h1>
+    </div>
+</section>
+<script>
+    var map;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 31.0377232, lng: 77.1215917},
+            zoom: 8
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEHbT2A2qJQYK8QgULXUu7NTxSoFR8Swg&callback=initMap"
+        async defer></script>
+
+</body>
+</html>
